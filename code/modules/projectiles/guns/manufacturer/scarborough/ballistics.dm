@@ -1,4 +1,4 @@
-#define SCARBOROUGH_ATTACHMENTS list(/obj/item/attachment/silencer, /obj/item/attachment/laser_sight, /obj/item/attachment/rail_light, /obj/item/attachment/bayonet)
+#define SCARBOROUGH_ATTACHMENTS list(/obj/item/attachment/silencer, /obj/item/attachment/laser_sight, /obj/item/attachment/rail_light, /obj/item/attachment/bayonet, /obj/item/attachment/energy_bayonet)
 #define SCARBOROUGH_ATTACH_SLOTS list(ATTACHMENT_SLOT_MUZZLE = 1, ATTACHMENT_SLOT_SCOPE = 1, ATTACHMENT_SLOT_RAIL = 1)
 
 //########### PISTOLS ###########//
@@ -281,6 +281,9 @@ NO_MAG_GUN_HELPER(automatic/pistol/rattlesnake)
 	. = ..()
 	icon_state = "[base_icon_state]_[ammo_count() == 1 ? 1 : round(ammo_count(),3)]"
 
+/obj/item/ammo_box/magazine/m9mm_rattlesnake/empty
+	start_empty = TRUE
+
 /obj/item/gun/ballistic/automatic/pistol/himehabu
 	name = "PC-81 \"Himehabu\""
 	desc = "An astonishingly compact machine pistol firing ultra-light projectiles, designed to be as small and concealable as possible while remaining a credible threat at very close range. Armor penetration is practically non-existent. Chambered in .22."
@@ -494,7 +497,7 @@ NO_MAG_GUN_HELPER(automatic/smg/sidewinder)
 
 /obj/item/ammo_box/magazine/m57_39_sidewinder
 	name = "Sidewinder magazine (5.7x39mm)"
-	desc = "A 30-round magazine for the Cobra submachine gun. These rounds do okay damage with average performance against armor."
+	desc = "A 30-round magazine for the Sidewinder submachine gun. These rounds do okay damage with average performance against armor."
 	icon_state = "sidewinder_mag-1"
 	base_icon_state = "sidewinder_mag"
 	ammo_type = /obj/item/ammo_casing/c57x39mm
